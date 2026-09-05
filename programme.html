@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Overview · Focused Space Science Meeting 2026</title>
+    <title>Programme Schedule · Focused Space Science Meeting 2026</title>
     <style>
         /* ============ RESET & BASE ============ */
         * {
@@ -73,43 +73,23 @@
             text-decoration: underline;
         }
 
-
- 
-
         /* ============ MAIN EVENT HEADER ============ */
-        .event-header { 
-    background: url("udaipur uso.png") center center / cover no-repeat; 
+              .event-header { 
+    background: url("udaipur uso.jpg") center center / cover no-repeat; 
     color: #fff; 
-    background-size: 100% 100%;
 
     width: 1150px;
-    height: 400px;
+    height: 600px;
 
     margin: 50px auto 0;
 
     padding: 30px 20px 25px;
 
-   /* background-position: center center;
-    background-size: cover; */
+    background-position: center center;
+    background-size: cover;
 
     position: relative;
     overflow: hidden;
-}
-
-
-/* Image fade overlay */
-.event-header::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(255, 255, 255, 0);
-    z-index: 0;
-}
-
-/* Text ko overlay ke upar rakho */
-.event-header .container {
-    position: relative;
-    z-index: 1;
 }
         .event-header::after {
             content: '';
@@ -143,20 +123,17 @@
         .event-title {
             font-size: 2rem;
             font-weight: 700;
-            line-height: .8;
+            line-height: 1.3;
             margin-bottom: 8px;
             letter-spacing: -0.5px;
-            color: #fcfcfc;
         }
         .event-meta {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
-            line-height: 2.1;
-            font-size: 18px;
-            color: rgba(2, 5, 1, 0.9);
-            margin-top: 0px;
-            font-weight: 700;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.9);
+            margin-top: 10px;
         }
         .event-meta span {
             display: flex;
@@ -328,6 +305,41 @@
             max-width: 100%;
             border-radius: 4px;
             border: 1px solid #ddd;
+        }
+
+
+        /* ============ SCIENTIFIC PROGRAMME ============ */
+        .schedule-day { margin-top: 22px; }
+        .day-heading {
+            background:#1a5276; color:#fff; padding:11px 14px;
+            border-radius:5px 5px 0 0; display:flex;
+            justify-content:space-between; gap:12px; flex-wrap:wrap;
+        }
+        .day-heading span {
+            background:#e67e22; padding:2px 9px; border-radius:12px;
+            font-size:12px; font-weight:700;
+        }
+        .schedule-table {
+            width:100%; border-collapse:collapse; font-size:13px;
+            table-layout:fixed; border:1px solid #d8dee3;
+        }
+        .schedule-table th,.schedule-table td {
+            border:1px solid #d8dee3; padding:9px 10px;
+            vertical-align:top; text-align:left;
+        }
+        .schedule-table th { background:#f4f7f9; color:#1a5276; font-weight:700; }
+        .schedule-table .time-col { width:14%; }
+        .schedule-table .program-col { width:31%; }
+        .schedule-table .details-col { width:55%; }
+        .schedule-table tr:nth-child(even) td { background:#fcfcfc; }
+        .schedule-table .session-row td { background:#eef4f8 !important; color:#1a5276; }
+        .schedule-table .session-row span { display:inline-block; margin-left:10px; color:#666; font-weight:400; }
+        .schedule-table .discussion-row td { background:#fff8f0 !important; }
+        .schedule-table .break-row td { background:#f8f9fa !important; color:#666; font-style:italic; }
+        .schedule-table .end-row td { background:#f1f5f7 !important; }
+        @media (max-width:650px) {
+            .schedule-table { display:block; overflow-x:auto; min-width:700px; }
+            .day-heading { flex-direction:column; align-items:flex-start; }
         }
 
         /* ============ FOOTER ============ */
@@ -539,9 +551,6 @@
                 white-space: nowrap;
             }
         }
-
-
-        
 </style>
 </head>
 <body>
@@ -551,14 +560,10 @@
 
     <div class="event-header">
         <div class="container">
-            <h1 class="event-title">Udaipur Solar Physics Meeting: Vikram Discussions</h1>
-            <div class="event-meta">
-                <!-- <span>📅 28–29 September 2026</span> -->
-                <span>📍 Udaipur Solar Observatory (USO)</span>
-            </div>
+            <h1 class="event-title">FOCUSED SPACE SCIENCE MEETING 2026</h1>
             <div class="event-meta">
                 <span>📅 28–29 September 2026</span>
-                <!-- <span>📍 Udaipur Solar Observatory (USO)</span>-->
+                <span>📍 Udaipur Solar Observatory (USO)</span>
             </div>
         </div>
     </div>
@@ -567,178 +572,63 @@
         <aside class="sidebar">
             <div class="menu-title">Menu</div>
             <ul class="menu">
-                <li><a href="index.html" class="active">Overview</a></li>
+                <li><a href="index.html">Overview</a></li>
                 <li><a href="registration.html">Registration</a></li>
-                <li><a href="programme.html">Programme Schedule</a></li>
-                <li><a href="organizing-team.html">Organizing Committee</a></li>
+                <li><a href="programme.html" class="active">Programme Schedule</a></li>
+                <li><a href="organizing-team.html">Organizing Team</a></li>
                 <li><a href="participants.html">Participant List</a></li>
             </ul>
             <div class="contact-box">
                 <h3>Contact</h3>
-                <p class="contact-name">Dr. Bhuwan Joshi</p> 
+                <p class="contact-name">Dr. Bhuwan Joshi</p>
                 <a href="mailto:bjoshi[dot]in[at]gmail[dot]com">✉ bjoshi[dot]in[at]gmail[dot]com</a>
             </div>
         </aside>
 
-  <main class="content">
-
+        
+<main class="content">
     <div class="description">
-
-        <h2 class="page-title">Udaipur Solar Physics Meeting: Vikram Discussions</h2>
-
-        <h3 class="key-objectives">Solar Transients and Space Weather</h3>
-
-        <p>
-            <strong>28–29 September 2026 | Udaipur Solar Observatory, Physical Research Laboratory (USO-PRL)</strong>
+        <h2 class="page-title">Scientific Programme</h2>
+        
+        <p class="page-subtitle">
+            To be announced...<br>
+            <!--Venue: Udaipur Solar Observatory, Physical Research Laboratory, Udaipur<br>
+            Dates: 28–29 September 2026 -->
         </p>
-
-        <p style="text-align: justify;">
-            Udaipur Solar Observatory, Physical Research Laboratory (USO-PRL), is organising a focused solar physics meeting,
-            on the lines of the <strong>PRL Vikram Discussions</strong>, on
-            <strong>“Solar Transients and Space Weather”</strong> on 28–29 September 2026.
-        </p>
-
-        <p style="text-align: justify;">
-            The <strong>Vikram Discussions</strong> at PRL are a series of focused scientific meetings designed to foster
-            in-depth scientific discussions, facilitate interactions across different areas of research, and provide an
-            environment for initiating collaborative research projects.
-        </p>
-
-<hr>
-       <!-- <div class="key-objectives">Why Udaipur, Why September?</div> -->
-
-        <p style="text-align: justify;">
-            The choice of September for this meeting is particularly meaningful. The month marks several important
-            milestones in India's solar and space research, including the foundation of Udaipur Solar Observatory, the launch of Aditya-L1, and the commencement
-            of scientific observations with the Solar X-ray Monitor (XSM) onboard
-            Chandrayaan-2.
-        </p>
-
-        <p style="text-align: justify;">
-            These milestones reflect the growing breadth of India's capabilities in solar and heliophysics—from
-            ground-based observations to X-ray astronomy, remote sensing of the solar atmosphere, and measurements
-            of the solar wind and interplanetary environment.
-        </p>
-
-        <p style="text-align: justify;">
-            The meeting therefore provides an appropriate occasion to bring together researchers working on
-            solar transients, their manifestations across the heliosphere, and space weather,
-            with an emphasis on connecting observations, physical processes, and emerging scientific opportunities.
-        </p>
-<hr>
-
-        <div class="key-objectives">Scientific Sessions</div>
-
-        <p>
-            The meeting will centre around four interconnected themes:
-        </p>
-
-        <ul class="scientific-themes">
-            <li>
-                <strong>Solar X-ray Astronomy in India: Current Capabilities and Future Prospects</strong>
-            </li>
-
-            <li>
-                <strong>Solar Atmospheric Phenomena: Processes, Dynamics and Transients</strong>
-            </li>
-
-           <li>
-                <strong>Space Weather</strong> </li>
-
-               <!--  <p style="text-align: justify;">
-                     Solar eruptions can produce disturbances that propagate through interplanetary space and influence
-                    the near-Earth environment. This session will focus on the connection between solar activity,
-                    its interplanetary manifestations, and space-weather consequences, bringing together perspectives
-                    from solar, heliospheric and near-Earth observations. 
-                </p>
-            </li> -->
-
-            <li>
-                <strong>New Insights from Aditya-L1</strong>
-            </li>
-        </ul>
-<hr>
-
-        <div class="key-objectives">Towards New Scientific Connections</div>
-
-        <p style="text-align: justify;">
-            The meeting is intended to be focused and discussion-driven, providing ample opportunity
-            for scientific interaction, particularly among younger researchers and emerging research groups.
-            By bringing together complementary observational, theoretical and modelling perspectives, the discussions
-            aim to identify common scientific questions, explore new collaborations, and initiate future joint
-            research programmes.
-        </p>
-
-        <p style="text-align: justify;">
-            The meeting will thus provide a platform to connect India's rich legacy in solar physics with the
-            new observational opportunities offered by Aditya-L1, Chandrayaan-2/XSM, and contemporary
-            ground-based facilities, and to strengthen collaborative efforts towards understanding the
-            Sun and its influence on the space environment.
-        </p>
-
-
-        <hr>
-
-       <!-- <div class="important-info">Meeting Details</div>
-
-        <ul>
-            <li>
-                <strong>Meeting:</strong> Udaipur Solar Physics Meeting: Vikram Discussions
-            </li>
-            <li>
-                <strong>Theme:</strong> Solar Transients and Space Weather
-            </li>
-            <li>
-                <strong>Dates:</strong> 28–29 September 2026
-            </li>
-            <li>
-                <strong>Venue:</strong> Udaipur Solar Observatory, Physical Research Laboratory (USO-PRL), Udaipur
-            </li>
-            <li>
-                <strong>Format:</strong> Focused and discussion-driven scientific meeting
-            </li>
-        </ul>
-
-
-        <hr>
-
-        <div class="bottom-image">
-            <img src="logo1.png" alt="Udaipur Solar Observatory">
+        <!--
+         <div class="notice">
+            <strong>IT = Invited Talk</strong>
+        </div> 
+        <div class="important-info">Scientific Programme</div>
+        
+        <div class="schedule-day">
+            <div class="day-heading"><span>Day 1</span><strong>28 September 2026 (Monday)</strong></div>
+            <table class="schedule-table">
+                <thead><tr><th class="time-col">Time</th><th class="program-col">Programme</th><th class="details-col">Details</th></tr></thead>
+                <tbody><tr><td>09:00–09:30</td><td>Onsite Registration &amp; Badge Collection</td><td></td></tr><tr><td>09:30–10:00</td><td>Welcome Addresses &amp; Announcements</td><td></td></tr><tr class="session-row"><td colspan="3"><strong>Session 1: Source Region and Origin of Solar Transients – I</strong><span>Session Chair: TBD</span></td></tr><tr><td>10:00–10:20</td><td>S. P. Rajaguru, IIA</td><td><em>Magnetic and Dynamic Processes in the Solar Atmosphere</em></td></tr><tr><td>10:20–10:40</td><td>Krishna Prasad, ARIES</td><td><em>Solar Transients and Their Evolution in the Solar Atmosphere</em></td></tr><tr class="discussion-row"><td>10:40–11:10</td><td>Discussions</td><td>Moderator: Girjesh Gupta, PRL</td></tr><tr class="break-row"><td>11:10–11:30</td><td>Tea Break</td><td></td></tr><tr class="session-row"><td colspan="3"><strong>Session 1: Source Region and Origin of Solar Transients – II</strong><span>Session Chair: TBD</span></td></tr><tr><td>11:30–11:50</td><td>Piyali Chatterjee, IIA</td><td><em>Shocks, Jets and Transient Phenomena in the Solar Atmosphere</em></td></tr><tr><td>11:50–12:10</td><td>Abhishek Srivastava, IIT-BHU</td><td><em>Solar Eruptions, Coronal Shocks and Transient Activity</em></td></tr><tr class="discussion-row"><td>12:15–12:45</td><td>Discussions</td><td>Moderator: Ramitendranath Bhattacharyya, PRL</td></tr><tr class="break-row"><td>12:45–14:00</td><td>Lunch</td><td></td></tr><tr class="session-row"><td colspan="3"><strong>Session 2: Solar X-ray Astronomy in India: Current Capabilities and Future Prospects – I</strong><span>Session Chair: TBD</span></td></tr><tr><td>14:00–14:20</td><td>Santosh V. Vadawale, PRL</td><td><em>X-ray Observations of Solar Energetic Phenomena</em></td></tr><tr><td>14:20–14:40</td><td>K. Sankarasubramanian, URSC</td><td><em>Solar X-ray Observations with Aditya-L1: Instrumentation and Science</em></td></tr><tr class="discussion-row"><td>14:40–15:10</td><td>Discussions</td><td>Moderator: Bhuwan Joshi, PRL</td></tr><tr class="break-row"><td>15:10–15:30</td><td>Tea Break</td><td></td></tr><tr class="session-row"><td colspan="3"><strong>Session 2: Solar X-ray Astronomy in India: Current Capabilities and Future Prospects – II</strong><span>Session Chair: TBD</span></td></tr><tr><td>15:30–15:50</td><td>Shyama Narendranath, URSC</td><td><em>X-ray Signatures of Solar Flares and Energetic Events</em></td></tr><tr><td>15:50–16:10</td><td>Arun Awasthi, DU</td><td><em>X-ray Diagnostics of Solar Flares and Energetic Phenomena</em></td></tr><tr><td>16:10–16:30</td><td>N. P. S. Mithun, PRL</td><td><em>Solar X-ray Observations: From Instrumentation to Science</em></td></tr><tr class="discussion-row"><td>16:30–17:00</td><td>Discussions</td><td>Moderator: Anshu Kumari, PRL</td></tr><tr class="end-row"><td colspan="2"><strong>End of Day 1</strong></td><td></td></tr><tr class="break-row"><td>18:30–21:30</td><td>Conference Dinner</td><td></td></tr></tbody>
+            </table>
         </div>
-
-    </div>
--->
-
-    <!-- Info Grid -->
-    <div class="info-grid">
-
-        <div class="info-item">
-            <span class="icon">⏰</span>
-            <div>
-                <span class="label">Starts</span>
-                <span class="value">28 September 2026</span>
-            </div>
+        <div class="schedule-day">
+            <div class="day-heading"><span>Day 2</span><strong>29 September 2026 (Tuesday)</strong></div>
+            <table class="schedule-table">
+                <thead><tr><th class="time-col">Time</th><th class="program-col">Programme</th><th class="details-col">Details</th></tr></thead>
+                <tbody><tr class="session-row"><td colspan="3"><strong>Session 3: Space Weather I: From the Near-Sun Environment to Interplanetary Space</strong><span>Session Chair: TBD</span></td></tr><tr><td>09:00–09:20</td><td>Dibyendu Chakrabarty, PRL</td><td><em>From Solar Transients to Space Weather: Connecting the Sun and the Heliosphere</em></td></tr><tr><td>09:20–09:40</td><td>Bhargav Vaidya, IIT Indore</td><td><em>From Solar Eruptions to Heliospheric Transients: Modelling Space Weather</em></td></tr><tr><td>09:40–10:00</td><td>Dhanya M. B., VSSC</td><td><em>Solar Transients and Their Impact on the Near-Earth Space Environment</em></td></tr><tr class="discussion-row"><td>10:00–10:30</td><td>Discussions</td><td>Moderator: Prasad Subramanian, IISER Pune</td></tr><tr class="break-row"><td>10:30–11:30</td><td>Poster Session + Tea Break</td><td></td></tr><tr class="session-row"><td colspan="3"><strong>Session 3: Space Weather II: The Sun–Earth Connection</strong><span>Session Chair: TBD</span></td></tr><tr><td>11:30–11:50</td><td>Geeta Vichare, IIG</td><td><em>Solar–Magnetosphere–Ionosphere Coupling and Space Weather</em></td></tr><tr><td>11:50–12:10</td><td>Ankush Bhaskar, VSSC</td><td><em>Multipoint Observations of CME/ICME Evolution and Space Weather</em></td></tr><tr class="discussion-row"><td>12:15–12:45</td><td>Discussions</td><td>Moderator: D. Pallamraju, PRL</td></tr><tr class="break-row"><td>12:45–14:00</td><td>Lunch</td><td></td></tr><tr class="session-row"><td colspan="3"><strong>Session 4: New Insights from Aditya-L1 – I</strong><span>Session Chair: TBD</span></td></tr><tr><td>14:00–14:20</td><td>Ramesh R., IIA</td><td><em>New Views of the Solar Corona with VELC/Aditya-L1</em></td></tr><tr><td>14:20–14:40</td><td>Sreejith P., MAHE</td><td><em>New Results from SUIT/Aditya-L1 Observations of the Solar Corona</em></td></tr><tr><td>14:40–15:00</td><td>Srikar P. Tadepalli, URSC</td><td><em>Solar X-ray Observations with HEL1OS/Aditya-L1</em></td></tr><tr class="break-row"><td>15:00–15:30</td><td>Tea Break</td><td></td></tr><tr class="session-row"><td colspan="3"><strong>Session 4: New Insights from Aditya-L1 – II</strong><span>Session Chair: TBD</span></td></tr><tr><td>15:30–15:50</td><td>Vipin K. Yadav, VSSC</td><td><em>MAG/Aditya-L1 Observations of Solar Wind and Interplanetary Transients</em></td></tr><tr><td>15:50–16:10</td><td>Abhilash R. Sarwade, URSC</td><td><em>Solar X-ray Spectroscopy with Aditya-L1</em></td></tr><tr><td>16:10–16:30</td><td>Dipu, PRL (Aakash/…)</td><td><em>Emerging Results from ASPEX/Aditya-L1: New Perspectives on the Solar Wind</em></td></tr><tr class="discussion-row"><td>16:30–17:00</td><td>Discussions</td><td>Moderator: Dipankar Banerjee, IIST</td></tr><tr><td>17:00–17:15</td><td>Closing Remarks</td><td></td></tr><tr class="end-row"><td colspan="2"><strong>End of the Conference / End of Day 2</strong></td><td></td></tr></tbody>
+            </table>
         </div>
-
-        <div class="info-item">
-            <span class="icon">⏳</span>
-            <div>
-                <span class="label">Ends</span>
-                <span class="value">29 September 2026</span>
-            </div>
+        <div class="important-info">Major Scientific Themes</div>
+        <ol style="padding-left:22px;margin-top:10px;">
+            <li>Solar transients and energetic phenomena</li>
+            <li>Solar X-ray astronomy</li>
+            <li>Space weather and Sun–Earth connection</li>
+            <li>Aditya-L1 and New Space Missions</li>
+            <li>Instrumentation, modelling, AI/ML, and future directions</li>
+        </ol>
+        <div class="notice" style="margin-top:20px;">
+            Session chairs are marked as TBD where specified in the supplied programme.
         </div>
-
-        <div class="info-item">
-            <span class="icon">🌐</span>
-            <div>
-                <span class="label">Timezone</span>
-                <span class="value">Asia/Kolkata</span>
-            </div>
-        </div>
-
-    </div>
-
+    </div> -->
 </main>
+
     </div>
 
     <footer class="site-footer">
