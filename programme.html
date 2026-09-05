@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programme Schedule</title>
+    <title>Programme Schedule · Focused Space Science Meeting 2026</title>
     <style>
         /* ============ RESET & BASE ============ */
         * {
@@ -79,8 +79,7 @@
     color: #fff; 
     background-size: 100% 100%;
 
-    width: 100%;
-    max-width: 1150px;
+    width: 1150px;
     height: 450px;
 
     margin: 50px auto 0;
@@ -383,7 +382,27 @@
 .footer-right .copyright {
     font-size: 12px;
     color: rgb(188, 70, 12);
-}.bottom-image {
+}
+
+        /* ============ RESPONSIVE ============ */
+        @media (max-width: 900px) {
+            .main-wrapper {
+                grid-template-columns: 1fr;
+            }
+            .event-title {
+                font-size: 1.6rem;
+            }
+            .top-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .info-grid {
+                flex-direction: column;
+                gap: 12px;
+            }
+        }
+
+        .bottom-image {
     margin-top: 30px;
     text-align: center;
 }
@@ -518,6 +537,10 @@
             font-size: 12px;
             font-weight: 600;
         }
+        @media (max-width: 650px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
             .form-group.full {
                 grid-column: auto;
             }
@@ -527,115 +550,7 @@
                 white-space: nowrap;
             }
         }
-
-        /* ============ RESPONSIVE SCALING ============ */
-        /* Keeps the existing desktop design and proportions,
-           while fitting it to smaller screens. */
-        @media (max-width: 1199px) {
-            .event-header {
-                width: 100%;
-                max-width: 1150px;
-            }
-
-            .main-wrapper {
-                width: 100%;
-                max-width: 1200px;
-            }
-
-            .footer-inner {
-                width: 100%;
-                max-width: 1150px;
-            }
-        }
-
-        @media (max-width: 900px) {
-            .main-wrapper {
-                grid-template-columns: 250px minmax(0, 1fr);
-                padding: 0 12px;
-                gap: 18px;
-            }
-
-            .content {
-                min-width: 0;
-                padding: 20px;
-            }
-
-            .event-header {
-                margin-top: 25px;
-                height: 39.13vw;
-                min-height: 280px;
-                max-height: 450px;
-            }
-
-            .event-title {
-                font-size: clamp(1.35rem, 3.2vw, 2rem);
-            }
-
-            .event-meta {
-                font-size: clamp(13px, 2vw, 18px);
-                gap: 12px;
-            }
-
-            .info-grid {
-                gap: 18px;
-            }
-        }
-
-        @media (max-width: 650px) {
-            .main-wrapper {
-                grid-template-columns: 1fr;
-                padding: 0 10px;
-                gap: 15px;
-            }
-
-            .sidebar {
-                width: 100%;
-            }
-
-            .event-header {
-                height: 39.13vw;
-                min-height: 210px;
-                margin-top: 15px;
-                padding: 20px 15px;
-            }
-
-            .event-title {
-                font-size: clamp(1.15rem, 5.5vw, 1.6rem);
-                line-height: 1.05;
-            }
-
-            .event-meta {
-                font-size: clamp(12px, 3.5vw, 16px);
-                line-height: 1.5;
-                gap: 8px;
-            }
-
-            .content {
-                padding: 15px;
-            }
-
-            .footer-inner {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 15px;
-            }
-
-            .footer-right {
-                text-align: center;
-            }
-
-            .data-table {
-                width: 100%;
-                display: block;
-                overflow-x: auto;
-            }
-
-            .form-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-    </style>
+</style>
 </head>
 <body>
     <div class="top-header">
@@ -644,7 +559,7 @@
 
     <div class="event-header">
         <div class="container">
-            <h1 class="event-title">FOCUSED SPACE SCIENCE MEETING 2026</h1>
+            <h1 class="event-title">Udaipur Solar Physics Meeting: Vikram Discussions</h1>
             <div class="event-meta">
                 <!-- <span>📅 28–29 September 2026</span> -->
                 <span>📍 Udaipur Solar Observatory (USO)</span>

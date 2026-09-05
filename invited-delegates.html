@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Invited Delegates</title>
+    <title>Invited Delegates · Udaipur Solar Physics Meeting 2026</title>
     <style>
         /* ============ RESET & BASE ============ */
         * {
@@ -79,8 +79,7 @@
     color: #fff; 
     background-size: 100% 100%;
 
-    width: 100%;
-    max-width: 1150px;
+    width: 1150px;
     height: 450px;
 
     margin: 50px auto 0;
@@ -348,7 +347,27 @@
 .footer-right .copyright {
     font-size: 12px;
     color: rgb(188, 70, 12);
-}.bottom-image {
+}
+
+        /* ============ RESPONSIVE ============ */
+        @media (max-width: 900px) {
+            .main-wrapper {
+                grid-template-columns: 1fr;
+            }
+            .event-title {
+                font-size: 1.6rem;
+            }
+            .top-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .info-grid {
+                flex-direction: column;
+                gap: 12px;
+            }
+        }
+
+        .bottom-image {
     margin-top: 30px;
     text-align: center;
 }
@@ -483,6 +502,10 @@
             font-size: 12px;
             font-weight: 600;
         }
+        @media (max-width: 650px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
             .form-group.full {
                 grid-column: auto;
             }
@@ -492,115 +515,7 @@
                 white-space: nowrap;
             }
         }
-
-        /* ============ RESPONSIVE SCALING ============ */
-        /* Keeps the existing desktop design and proportions,
-           while fitting it to smaller screens. */
-        @media (max-width: 1199px) {
-            .event-header {
-                width: 100%;
-                max-width: 1150px;
-            }
-
-            .main-wrapper {
-                width: 100%;
-                max-width: 1200px;
-            }
-
-            .footer-inner {
-                width: 100%;
-                max-width: 1150px;
-            }
-        }
-
-        @media (max-width: 900px) {
-            .main-wrapper {
-                grid-template-columns: 250px minmax(0, 1fr);
-                padding: 0 12px;
-                gap: 18px;
-            }
-
-            .content {
-                min-width: 0;
-                padding: 20px;
-            }
-
-            .event-header {
-                margin-top: 25px;
-                height: 39.13vw;
-                min-height: 280px;
-                max-height: 450px;
-            }
-
-            .event-title {
-                font-size: clamp(1.35rem, 3.2vw, 2rem);
-            }
-
-            .event-meta {
-                font-size: clamp(13px, 2vw, 18px);
-                gap: 12px;
-            }
-
-            .info-grid {
-                gap: 18px;
-            }
-        }
-
-        @media (max-width: 650px) {
-            .main-wrapper {
-                grid-template-columns: 1fr;
-                padding: 0 10px;
-                gap: 15px;
-            }
-
-            .sidebar {
-                width: 100%;
-            }
-
-            .event-header {
-                height: 39.13vw;
-                min-height: 210px;
-                margin-top: 15px;
-                padding: 20px 15px;
-            }
-
-            .event-title {
-                font-size: clamp(1.15rem, 5.5vw, 1.6rem);
-                line-height: 1.05;
-            }
-
-            .event-meta {
-                font-size: clamp(12px, 3.5vw, 16px);
-                line-height: 1.5;
-                gap: 8px;
-            }
-
-            .content {
-                padding: 15px;
-            }
-
-            .footer-inner {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 15px;
-            }
-
-            .footer-right {
-                text-align: center;
-            }
-
-            .data-table {
-                width: 100%;
-                display: block;
-                overflow-x: auto;
-            }
-
-            .form-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-    </style>
+</style>
 </head>
 <body>
     <div class="top-header">
@@ -648,95 +563,101 @@
 
         <div class="delegate-list">
             <div class="delegate-item">
-                <strong>Abhishekh K. Srivastava</strong>
+                <strong>Abhishekh K. Srivastava</strong>,
                 <span>IIT-BHU, Varanasi</span>
             </div>
+
             <div class="delegate-item">
-                <strong>Anil Bhardwaj</strong>
+                <strong>Anil Bhardwaj</strong>,
                 <span>PRL, Ahmedabad</span>
             </div>
-                 <div class="delegate-item">
-                <strong>Anil Narayan Raghav</strong>
+            <div class="delegate-item">
+                <strong>Anil Narayan Raghav</strong>,
                 <span>University of Mumbai, Mumbai</span>
             </div>
+            
             <div class="delegate-item">
-                <strong>Ankush Bhaskar</strong>
-                <span>SPL-VSSC</span>
+                <strong>Ankush Bhaskar</strong>,
+                <span>SPL-VSSC, ISRO, Thiruvananthapuram</span>
             </div>
             <div class="delegate-item">
-                <strong>Arun Kumar Awasthi</strong>
+                <strong>Arun Kumar Awasthi</strong>,
                 <span>University of Delhi, Delhi</span>
             </div>
             <div class="delegate-item">
-                <strong>Bhargav Vaidya</strong>
+                <strong>Bhargav Vaidya</strong>,
                 <span>IIT, Indore</span>
             </div>
             <div class="delegate-item">
-                <strong>D. Pallamraju</strong>
+                <strong>D. Pallamraju</strong>,
                 <span>PRL, Ahmedabad</span>
             </div>
             <div class="delegate-item">
-                <strong>Dibyendu Chakrabarty</strong>
+                <strong>Dibyendu Chakrabarty</strong>,
                 <span>PRL, Ahmedabad</span>
             </div>
             <div class="delegate-item">
-                <strong>Dipankar Banerjee</strong>
+                <strong>Dipankar Banerjee</strong>,
                 <span>IIST, Thiruvananthapuram</span>
             </div>
             <div class="delegate-item">
-                <strong>Geeta Vichare</strong>
+                <strong>Geeta Vichare</strong>,
                 <span>IIG, Mumbai</span>
             </div>
             <div class="delegate-item">
-                <strong>K. Sankarasubramanian</strong>
+                <strong>K. Sankarasubramanian</strong>,
                 <span>URSC, ISRO, Bengaluru</span>
             </div>
             <div class="delegate-item">
-                <strong>Krishna Prasad Sayamanthula</strong>
+                <strong>Krishna Prasad Sayamanthula</strong>,
                 <span>ARIES, Nainital</span>
             </div>
             <div class="delegate-item">
-                <strong>M. Shanmugam</strong>
+                <strong>M. Shanmugam</strong>,
                 <span>PRL, Ahmedabad</span>
             </div>
             <div class="delegate-item">
-                <strong>Nirvikar Dashora</strong>
+                <strong>Nirvikar Dashora</strong>,
                 <span>NARL, Tirupati</span>
             </div>
             <div class="delegate-item">
-                <strong>NPS Mithun</strong>
+                <strong>NPS Mithun</strong>,
                 <span>PRL, Ahmedabad</span>
             </div>
             <div class="delegate-item">
-                <strong>Piyali Chatterjee</strong>
+                <strong>Piyali Chatterjee</strong>,
                 <span>IIA, Bengaluru</span>
             </div>
             <div class="delegate-item">
-                <strong>Ram Ajor Maurya</strong>
+                <strong>Ram Ajor Maurya</strong>,
                 <span>NIT, Calicut</span>
             </div>
+            
+
+            
             <div class="delegate-item">
-                <strong>S.P. Rajaguru</strong>
+                <strong>S.P. Rajaguru</strong>,
                 <span>IIA, Bengaluru</span>
             </div>
+
             <div class="delegate-item">
-                <strong>Sardar Singh Rao</strong>
-                <span>Patna University, Patna</span>
-            </div>
-            <div class="delegate-item">
-                <strong>Santosh Vadawale</strong>
-                <span>PRL, Ahmedabad</span>
-            </div>
-             <div class="delegate-item">
-                <strong>Shibu K. Mathew</strong>
+                <strong>Shibu K. Mathew</strong>,
                 <span>USO-PRL, Udaipur</span>
             </div>
             <div class="delegate-item">
-                <strong>Vemareddy Panditi</strong>
+                <strong>Sardar Singh Rao</strong>,
+                <span>Patna University, Patna</span>
+            </div>
+            <div class="delegate-item">
+                <strong>Santosh Vadawale</strong>,
+                <span>PRL, Ahmedabad</span>
+            </div>
+            <div class="delegate-item">
+                <strong>Vemareddy Panditi</strong>,
                 <span>IIA, Bengaluru</span>
             </div>
             <div class="delegate-item">
-                <strong>Vipin Kumar Yadav</strong>
+                <strong>Vipin Kumar Yadav</strong>,
                 <span>SPL-VSSC, ISRO, Thiruvananthapuram</span>
             </div>
         </div>
