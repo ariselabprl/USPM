@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Organizing Committee · Udaipur Solar Physics Meeting 2026</title>
+    <title>Organizing Committee</title>
     <style>
         /* ============ RESET & BASE ============ */
         * {
@@ -74,19 +74,21 @@
         }
 
         /* ============ MAIN EVENT HEADER ============ */
-              .event-header { 
-    background: url("udaipur uso.jpg") center center no-repeat; 
+           .event-header { 
+    background: url("udaipur uso.png") center center / cover no-repeat; 
     color: #fff; 
+    background-size: 100% 100%;
 
-    width: 1150px;
-    height: 600px;
+    width: 100%;
+    max-width: 1150px;
+    height: 450px;
 
     margin: 50px auto 0;
 
     padding: 30px 20px 25px;
 
-    background-position: center center;
-    background-size: 100% 100%;
+   /* background-position: center center;
+    background-size: cover; */
 
     position: relative;
     overflow: hidden;
@@ -120,20 +122,23 @@
             text-transform: uppercase;
             margin-bottom: 12px;
         }
-        .event-title {
+         .event-title {
             font-size: 2rem;
             font-weight: 700;
-            line-height: 1.3;
+            line-height: .8;
             margin-bottom: 8px;
             letter-spacing: -0.5px;
+            color: #fcfcfc;
         }
         .event-meta {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
-            font-size: 14px;
-            color: rgba(255, 255, 255, 0.9);
-            margin-top: 10px;
+            line-height: 2.1;
+            font-size: 18px;
+            color: rgba(2, 5, 1, 0.9);
+            margin-top: 0px;
+            font-weight: 700;
         }
         .event-meta span {
             display: flex;
@@ -308,67 +313,42 @@
         }
 
         /* ============ FOOTER ============ */
-        .site-footer {
-            background: #0e2f44;
-            color: rgba(255, 255, 255, 0.85);
-            padding: 30px 20px 20px;
-            margin-top: 40px;
-            font-size: 13px;
-        }
-        .site-footer .footer-inner {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        .site-footer .footer-left {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-        .site-footer .footer-left img {
-            height: 45px;
-            width: auto;
-        }
-        .site-footer .footer-links {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        .site-footer .footer-links a {
-            color: rgba(255, 255, 255, 0.8);
-            text-decoration: none;
-        }
-        .site-footer .footer-links a:hover {
-            color: #fff;
-            text-decoration: underline;
-        }
-        .site-footer .version {
-            color: rgba(255, 255, 255, 0.6);
-        }
+         .site-footer {
+    background: #83c1e8;
+    color:  rgb(188, 70, 12);
+    padding: 15px 20px;
+    margin-top: 40px;
+    font-size: 13px;
+}
 
-        /* ============ RESPONSIVE ============ */
-        @media (max-width: 900px) {
-            .main-wrapper {
-                grid-template-columns: 1fr;
-            }
-            .event-title {
-                font-size: 1.6rem;
-            }
-            .top-header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            .info-grid {
-                flex-direction: column;
-                gap: 12px;
-            }
-        }
+.footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1150px;
+    margin: 0 auto;
+}
 
-        .bottom-image {
+.footer-left img {
+    height: 55px;
+    width: auto;
+}
+
+.footer-right {
+    text-align: right;
+    line-height: 1.6;
+    
+}
+
+.footer-right a {
+    color:rgb(188, 70, 12);
+    text-decoration: none;
+}
+
+.footer-right .copyright {
+    font-size: 12px;
+    color: rgb(188, 70, 12);
+}.bottom-image {
     margin-top: 30px;
     text-align: center;
 }
@@ -503,10 +483,6 @@
             font-size: 12px;
             font-weight: 600;
         }
-        @media (max-width: 650px) {
-            .form-grid {
-                grid-template-columns: 1fr;
-            }
             .form-group.full {
                 grid-column: auto;
             }
@@ -516,7 +492,115 @@
                 white-space: nowrap;
             }
         }
-</style>
+
+        /* ============ RESPONSIVE SCALING ============ */
+        /* Keeps the existing desktop design and proportions,
+           while fitting it to smaller screens. */
+        @media (max-width: 1199px) {
+            .event-header {
+                width: 100%;
+                max-width: 1150px;
+            }
+
+            .main-wrapper {
+                width: 100%;
+                max-width: 1200px;
+            }
+
+            .footer-inner {
+                width: 100%;
+                max-width: 1150px;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .main-wrapper {
+                grid-template-columns: 250px minmax(0, 1fr);
+                padding: 0 12px;
+                gap: 18px;
+            }
+
+            .content {
+                min-width: 0;
+                padding: 20px;
+            }
+
+            .event-header {
+                margin-top: 25px;
+                height: 39.13vw;
+                min-height: 280px;
+                max-height: 450px;
+            }
+
+            .event-title {
+                font-size: clamp(1.35rem, 3.2vw, 2rem);
+            }
+
+            .event-meta {
+                font-size: clamp(13px, 2vw, 18px);
+                gap: 12px;
+            }
+
+            .info-grid {
+                gap: 18px;
+            }
+        }
+
+        @media (max-width: 650px) {
+            .main-wrapper {
+                grid-template-columns: 1fr;
+                padding: 0 10px;
+                gap: 15px;
+            }
+
+            .sidebar {
+                width: 100%;
+            }
+
+            .event-header {
+                height: 39.13vw;
+                min-height: 210px;
+                margin-top: 15px;
+                padding: 20px 15px;
+            }
+
+            .event-title {
+                font-size: clamp(1.15rem, 5.5vw, 1.6rem);
+                line-height: 1.05;
+            }
+
+            .event-meta {
+                font-size: clamp(12px, 3.5vw, 16px);
+                line-height: 1.5;
+                gap: 8px;
+            }
+
+            .content {
+                padding: 15px;
+            }
+
+            .footer-inner {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .footer-right {
+                text-align: center;
+            }
+
+            .data-table {
+                width: 100%;
+                display: block;
+                overflow-x: auto;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
 </head>
 <body>
     <div class="top-header">
@@ -526,9 +610,13 @@
     <div class="event-header">
         <div class="container">
             <h1 class="event-title">Udaipur Solar Physics Meeting: Vikram Discussions</h1>
+           <div class="event-meta">
+                <!-- <span>📅 28–29 September 2026</span> -->
+                <span>📍 Udaipur Solar Observatory (USO)</span>
+            </div>
             <div class="event-meta">
                 <span>📅 28–29 September 2026</span>
-                <span>📍 Udaipur Solar Observatory (USO)</span>
+                <!-- <span>📍 Udaipur Solar Observatory (USO)</span>-->
             </div>
         </div>
     </div>
@@ -537,11 +625,12 @@
         <aside class="sidebar">
             <div class="menu-title">Menu</div>
             <ul class="menu">
-                <li><a href="index.html">Overview</a></li>
+                <li><a href="index.html" class="active">Overview</a></li>
+                <li><a href="invited-delegates.html">Invited Delegates</a></li>
                 <li><a href="registration.html">Registration</a></li>
                 <li><a href="programme.html">Programme Schedule</a></li>
-                <li><a href="organizing-team.html" class="active">Organizing Team</a></li>
                 <li><a href="participants.html">Participant List</a></li>
+                <li><a href="organizing-team.html">Organizing Committee</a></li>
             </ul>
             <div class="contact-box">
                 <h3>Contact</h3>
@@ -571,16 +660,27 @@
 </main>
     </div>
 
-    <footer class="site-footer">
-        <div class="footer-inner">
-            <div class="footer-left">
-                <img src="uso-logo.png" alt="Udaipur Solar Observatory">
-                <span>Powered by <a href="https://www.prl.res.in/prl-eng/division/usob/homepage" style="color:#fff;">USO</a></span>
+   <footer class="site-footer">
+    <div class="footer-inner">
+
+        <div class="footer-left">
+            <img src="uso-logo.png" alt="Udaipur Solar Observatory">
+        </div>
+
+        <div class="footer-right">
+            <div>
+                <a href="https://www.prl.res.in/prl-eng/division/usob/homepage">
+                    Website maintained by the USPM Organising Committee.
+                </a>
+            </div>
+
+            <div class="copyright">
+                © 2026 Physical Research Laboratory (PRL), Dept&middot; of Space,
+                Govt&middot; of India, All rights reserved.
             </div>
         </div>
-        <div style="text-align:center; margin-top:15px; font-size:12px; color:rgba(255,255,255,0.5);">
-            © 2026 Physical Research Laboratory (PRL), Dept&middot; of Space, Govt&middot; of India&middot; All rights reserved.
-        </div>
-    </footer>
+
+    </div>
+</footer>
 </body>
 </html>
