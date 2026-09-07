@@ -52,6 +52,8 @@
             gap: 10px;
             border-bottom: 3px solid #e67e22;
             font-size: 13px;
+            width: 1110px;
+            margin: 0px auto 0;
         }
 
         .top-header .institution {
@@ -79,7 +81,7 @@
     color: #fff; 
     background-size: 100% 100%;
 
-    width: 1150px;
+    width: 1110px;
     height: 450px;
 
     margin: 50px auto 0;
@@ -335,6 +337,8 @@
     padding: 15px 20px;
     margin-top: 40px;
     font-size: 13px;
+    width: 1110px;
+    margin: 40px auto 0;
 }
 
 .footer-inner {
@@ -366,22 +370,7 @@
     color: rgb(188, 70, 12);
 }
         /* ============ RESPONSIVE ============ */
-        @media (max-width: 900px) {
-            .main-wrapper {
-                grid-template-columns: 1fr;
-            }
-            .event-title {
-                font-size: 1.6rem;
-            }
-            .top-header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            .info-grid {
-                flex-direction: column;
-                gap: 12px;
-            }
-        }
+        
 
         .bottom-image {
     margin-top: 30px;
@@ -518,22 +507,39 @@
             font-size: 12px;
             font-weight: 600;
         }
-        @media (max-width: 650px) {
-            .form-grid {
-                grid-template-columns: 1fr;
-            }
-            .form-group.full {
-                grid-column: auto;
-            }
-            .data-table {
-                display: block;
-                overflow-x: auto;
-                white-space: nowrap;
-            }
-        }
+        
+
+
+/* ============ DESKTOP PAGE SCALE FIT ============ */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+#scale-viewport {
+    width: 100%;
+    max-width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+
+#scale-wrapper {
+    width: 1150px;
+    max-width: none;
+    transform-origin: top left;
+    margin: 0;
+    position: relative;
+}
+
 </style>
 </head>
 <body>
+    <div id="scale-viewport">
+        <div id="scale-wrapper">
+
     <div class="top-header">
         <span class="institution">&#9733; Udaipur Solar Observatory (USO)</span>
     </div>
@@ -556,9 +562,9 @@
         <aside class="sidebar">
             <div class="menu-title">Menu</div>
             <ul class="menu">
-                <li><a href="index.html" class="active">Overview</a></li>
+                <li><a href="index.html">Overview</a></li>
                 <li><a href="invited-delegates.html">Invited Delegates</a></li>
-                <li><a href="registration.html">Registration</a></li>
+                <li><a href="registration.html" class="active">Registration</a></li>
                 <li><a href="programme.html">Programme Schedule</a></li>
                 <li><a href="participants.html">Participant List</a></li>
                 <li><a href="organizing-team.html">Organizing Committee</a></li>
@@ -566,7 +572,7 @@
             <div class="contact-box">
                 <h3>Contact</h3>
                 <p class="contact-name">Dr. Bhuwan Joshi</p>
-                <a href="mailto:bjoshi[dot]in[at]gmail[dot]com">✉ bjoshi[dot]in[at]gmail[dot]com</a>
+                <a href="bhuwan[at]prl[dot]res[dot]in">✉ bhuwan[at]prl[dot]res[dot]in</a>
             </div>
         </aside>
 
@@ -651,5 +657,66 @@
 
     </div>
 </footer>
+
+        </div><!-- /#scale-wrapper -->
+    </div><!-- /#scale-viewport -->
+
+    
+<script>
+(function () {
+    const wrapper = document.getElementById('scale-wrapper');
+    const viewport = document.getElementById('scale-viewport');
+    const fixedWidth = 1150;
+    const sideGap = 8;
+
+    function fitDesktopPage() {
+        if (!wrapper || !viewport) return;
+
+        const viewportWidth = viewport.clientWidth ||
+            document.documentElement.clientWidth ||
+            window.innerWidth;
+
+        const availableWidth = Math.max(1, viewportWidth - (sideGap * 2));
+        const scale = Math.min(1, availableWidth / fixedWidth);
+
+        wrapper.style.transform = 'scale(' + scale + ')';
+        wrapper.style.transformOrigin = 'top left';
+
+        if (scale < 1) {
+            wrapper.style.marginLeft = sideGap + 'px';
+            wrapper.style.marginRight = '0';
+        } else {
+            wrapper.style.marginLeft = 'auto';
+            wrapper.style.marginRight = 'auto';
+        }
+
+        const naturalHeight = wrapper.offsetHeight;
+        viewport.style.height = Math.ceil(naturalHeight * scale) + 'px';
+        document.documentElement.style.overflowX = 'hidden';
+        document.body.style.overflowX = 'hidden';
+    }
+
+    function refresh() {
+        requestAnimationFrame(fitDesktopPage);
+    }
+
+    window.addEventListener('load', refresh);
+    window.addEventListener('resize', refresh);
+    window.addEventListener('orientationchange', refresh);
+
+    if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(refresh);
+    }
+
+    document.querySelectorAll('img').forEach(function (img) {
+        if (!img.complete) {
+            img.addEventListener('load', refresh, { once: true });
+        }
+    });
+
+    refresh();
+})();
+</script>
+
 </body>
 </html>
