@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Organizing Committee · Udaipur Solar Physics Meeting 2026</title>
+    <title>Conference Venue · Udaipur Solar Physics Meeting 2026</title>
     <style>
         /* ============ RESET & BASE ============ */
         * {
@@ -75,8 +75,11 @@
             text-decoration: underline;
         }
 
+
+ 
+
         /* ============ MAIN EVENT HEADER ============ */
-           .event-header { 
+        .event-header { 
     background: url("udaipur uso.png") center center / cover no-repeat; 
     color: #fff; 
     background-size: 100% 100%;
@@ -93,6 +96,22 @@
 
     position: relative;
     overflow: hidden;
+}
+
+
+/* Image fade overlay */
+.event-header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0);
+    z-index: 0;
+}
+
+/* Text ko overlay ke upar rakho */
+.event-header .container {
+    position: relative;
+    z-index: 1;
 }
         .event-header::after {
             content: '';
@@ -123,7 +142,7 @@
             text-transform: uppercase;
             margin-bottom: 12px;
         }
-         .event-title {
+        .event-title {
             font-size: 2rem;
             font-weight: 700;
             line-height: .8;
@@ -314,7 +333,7 @@
         }
 
         /* ============ FOOTER ============ */
-         .site-footer {
+       .site-footer {
     background: #83c1e8;
     color:  rgb(188, 70, 12);
     padding: 15px 20px;
@@ -328,7 +347,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1150px;
+    max-width: 1050px;
     margin: 0 auto;
 }
 
@@ -494,6 +513,9 @@
         
 
 
+        
+
+
 /* ============ DESKTOP PAGE SCALE FIT ============ */
 html, body {
     margin: 0;
@@ -518,6 +540,93 @@ html, body {
     position: relative;
 }
 
+
+        .reach-section {
+            margin-top: 22px;
+        }
+        .reach-section:first-of-type {
+            margin-top: 8px;
+        }
+        .reach-section h3 {
+            color: #1a5276;
+            font-size: 18px;
+            margin: 0 0 9px;
+            padding-bottom: 6px;
+            border-bottom: 2px solid #e67e22;
+        }
+        .reach-section ol {
+            padding-left: 24px;
+            margin: 8px 0 18px;
+        }
+        .reach-section ol > li {
+            padding-left: 3px;
+            margin-bottom: 18px;
+        }
+        .reach-section ul {
+            list-style: disc;
+            padding-left: 25px;
+            margin: 8px 0 16px;
+        }
+        .reach-section ul li {
+            margin-bottom: 7px;
+        }
+
+
+        /* ============ CONFERENCE VENUE ============ */
+        .venue-address {
+            background: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-left: 4px solid #1a5276;
+            border-radius: 6px;
+            padding: 15px 18px;
+            margin: 15px 0 20px;
+            line-height: 1.7;
+        }
+
+        .venue-address strong {
+            color: #1a5276;
+        }
+
+        .map-wrap {
+            margin-top: 20px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            overflow: hidden;
+            background: #f4f4f4;
+        }
+
+        .map-wrap iframe {
+            display: block;
+            width: 100%;
+            height: 360px;
+            border: 0;
+        }
+
+        .map-link {
+            display: inline-block;
+            margin-top: 12px;
+            background: #1a5276;
+            color: #fff !important;
+            padding: 9px 15px;
+            border-radius: 4px;
+            text-decoration: none !important;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .map-link:hover {
+            background: #154360;
+        }
+
+        .venue-note {
+            background: #fff7ef;
+            border-left: 4px solid #e67e22;
+            padding: 12px 15px;
+            margin: 20px 0;
+            color: #555;
+            font-size: 14px;
+        }
+
 </style>
 </head>
 <body>
@@ -531,7 +640,7 @@ html, body {
     <div class="event-header">
         <div class="container">
             <h1 class="event-title">Udaipur Solar Physics Meeting: Vikram Discussions</h1>
-           <div class="event-meta">
+            <div class="event-meta">
                 <!-- <span>📅 28–29 September 2026</span> -->
                 <span>📍 Udaipur Solar Observatory (USO)</span>
             </div>
@@ -547,44 +656,80 @@ html, body {
             <div class="menu-title">Menu</div>
             <ul class="menu">
                 <li><a href="index.html">Overview</a></li>
-                <!-- <li><a href="invited-delegates.html">Invited Delegates</a></li> -->
                 <li><a href="registration.html">Registration</a></li>
                 <li><a href="programme.html">Programme Schedule</a></li>
                 <li><a href="participants.html">Participant List</a></li>
                 <li><a href="accommodation.html">Accommodation</a></li>
                 <li><a href="how-to-reach-udaipur.html">How to Reach Udaipur</a></li>
-                <li><a href="organizing-team.html" class="active">Organizing Committee</a></li>
-                <li><a href="conference-venue.html">Conference Venue</a></li>
+                
+                <li><a href="organizing-team.html">Organizing Committee</a></li>
+                <li><a href="conference-venue.html" class="active">Conference Venue</a></li>
             </ul>
             <div class="contact-box">
                 <h3>Contact</h3>
-                <p class="contact-name">Dr. Bhuwan Joshi</p>
+                <p class="contact-name">Dr. Bhuwan Joshi</p> 
                 <a href="bhuwan[at]prl[dot]res[dot]in">✉ bhuwan[at]prl[dot]res[dot]in</a>
             </div>
         </aside>
 
-        <main class="content">
+  <main class="content">
     <div class="description">
-        <h2 class="page-title">Organizing Committee</h2>
+        <h2 class="page-title">Conference Venue</h2>
 
-        <div class="important-info">Patron</div>
-        <p style="margin-bottom: 22px;">
-            <strong>Prof. Anil Bhardwaj</strong><br>
-            Director, Physical Research Laboratory (PRL)
+        <p>
+            The Udaipur Solar Observatory (USO), Physical Research Laboratory (PRL), Udaipur,
+            will be the venue for the conference. The conference sessions will be held at the
+            USO Institute Campus.
         </p>
 
-        <div class="important-info">Programme Organising Committee</div>
-        <p style="line-height: 1.8; margin-bottom: 0;">
-            Prof. Bhuwan Joshi<br>
-            Prof. Ramit Bhattacharyya<br>
-            Dr. Girjesh Gupta<br>
-            Dr. Anshu Kumari Singh (Convener)
+        <div class="venue-address">
+            <strong>Venue Address:</strong><br>
+            Udaipur Solar Observatory<br>
+            Physical Research Laboratory (PRL)<br>
+            Badi Road, Dewali<br>
+            Udaipur – 313001, Rajasthan, India
+        </div>
+
+        <p>
+            Udaipur Solar Observatory is a dedicated solar research facility of PRL, located on
+            the north-western shore of Fateh Sagar Lake.
         </p>
+
+        <hr>
+
+        <h3 class="key-objectives">Google Maps</h3>
+
+        <div class="venue-note">
+            <strong>Note:</strong> Note: The conference venue is the USO Institute Campus on Badi Road, Dewali. When searching for the venue on Google Maps, please search for <strong>“Udaipur Solar Observatory Main Office”</strong> to locate the conference venue. Searching for <strong>“Udaipur Solar Observatory”</strong> alone may direct you to the island observatory located in Fateh Sagar Lake, which is not the conference venue.
+            
+        </div>
+
+        <p>
+            View the Conference Venue on Google Maps →
+        </p>
+
+        <a class="map-link"
+           href="https://share.google/6g05df40HBLO7gTaF"
+           target="_blank"
+           rel="noopener noreferrer">
+            View the Conference Venue on Google Maps →
+        </a>
+
+        <div class="map-wrap">
+            <iframe
+                src="https://www.google.com/maps?q=Udaipur%20Solar%20Observatory%20Main%20Office%2C%20Badi%20Road%2C%20Dewali%2C%20Udaipur%2C%20Rajasthan%20313001&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        
     </div>
 </main>
     </div>
 
-   <footer class="site-footer">
+  <footer class="site-footer">
     <div class="footer-inner">
 
         <div class="footer-left">

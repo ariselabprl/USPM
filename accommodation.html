@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Invited Delegates · Udaipur Solar Physics Meeting 2026</title>
+    <title>Accommodation · Udaipur Solar Physics Meeting 2026</title>
     <style>
         /* ============ RESET & BASE ============ */
         * {
@@ -75,8 +75,11 @@
             text-decoration: underline;
         }
 
+
+ 
+
         /* ============ MAIN EVENT HEADER ============ */
-      .event-header { 
+        .event-header { 
     background: url("udaipur uso.png") center center / cover no-repeat; 
     color: #fff; 
     background-size: 100% 100%;
@@ -93,6 +96,22 @@
 
     position: relative;
     overflow: hidden;
+}
+
+
+/* Image fade overlay */
+.event-header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0);
+    z-index: 0;
+}
+
+/* Text ko overlay ke upar rakho */
+.event-header .container {
+    position: relative;
+    z-index: 1;
 }
         .event-header::after {
             content: '';
@@ -123,7 +142,7 @@
             text-transform: uppercase;
             margin-bottom: 12px;
         }
-     .event-title {
+        .event-title {
             font-size: 2rem;
             font-weight: 700;
             line-height: .8;
@@ -314,7 +333,7 @@
         }
 
         /* ============ FOOTER ============ */
-          .site-footer {
+       .site-footer {
     background: #83c1e8;
     color:  rgb(188, 70, 12);
     padding: 15px 20px;
@@ -328,7 +347,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1150px;
+    max-width: 1050px;
     margin: 0 auto;
 }
 
@@ -494,6 +513,9 @@
         
 
 
+        
+
+
 /* ============ DESKTOP PAGE SCALE FIT ============ */
 html, body {
     margin: 0;
@@ -531,7 +553,7 @@ html, body {
     <div class="event-header">
         <div class="container">
             <h1 class="event-title">Udaipur Solar Physics Meeting: Vikram Discussions</h1>
-           <div class="event-meta">
+            <div class="event-meta">
                 <!-- <span>📅 28–29 September 2026</span> -->
                 <span>📍 Udaipur Solar Observatory (USO)</span>
             </div>
@@ -547,144 +569,128 @@ html, body {
             <div class="menu-title">Menu</div>
             <ul class="menu">
                 <li><a href="index.html">Overview</a></li>
-                <li><a href="invited-delegates.html" class="active">Invited Delegates</a></li>
+                <!--<li><a href="invited-delegates.html">Invited Delegates</a></li>-->
                 <li><a href="registration.html">Registration</a></li>
                 <li><a href="programme.html">Programme Schedule</a></li>
                 <li><a href="participants.html">Participant List</a></li>
+                <li><a href="accommodation.html" class="active">Accommodation</a></li>
+                <li><a href="how-to-reach-udaipur.html">How to Reach Udaipur</a></li>
                 <li><a href="organizing-team.html">Organizing Committee</a></li>
+                <li><a href="conference-venue.html">Conference Venue</a></li>
+                
             </ul>
             <div class="contact-box">
                 <h3>Contact</h3>
-                <p class="contact-name">Dr. Bhuwan Joshi</p>
+                <p class="contact-name">Dr. Bhuwan Joshi</p> 
                 <a href="bhuwan[at]prl[dot]res[dot]in">✉ bhuwan[at]prl[dot]res[dot]in</a>
             </div>
         </aside>
 
-        <main class="content">
+  <main class="content">
+
     <div class="description">
-        <h2 class="page-title">Invited Delegates</h2>
-        <p class="page-subtitle">
-            
+        <h2 class="page-title">Accommodation</h2>
+
+        <p>
+            To facilitate your stay in Udaipur during the Udaipur Solar Physics Meeting (USPM 2026),
+            the Organising Committee has negotiated special room rates with Amantra Comfort Hotel
+            for invited delegates.
         </p>
 
-        <div class="delegate-list">
-            <div class="delegate-item">
-                <strong>Abhilash Sarwade</strong>,
-                <span>URSC, Bengaluru</span>
-            </div>
-         <div class="delegate-list">
-            <div class="delegate-item">
-                <strong>Abhishekh K. Srivastava</strong>,
-                <span>IIT-BHU, Varanasi</span>
-            </div>
+        <hr>
 
-        
- 
+        <h3 class="key-objectives">Negotiated Room Rates</h3>
 
+        <p>
+            The rates below are inclusive of breakfast and exclusive of 5% GST:
+        </p>
 
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Room Category</th>
+                    <th>Single Occupancy</th>
+                    <th>Double Occupancy</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Amantra Comfort</strong></td>
+                    <td>₹2,800 per night</td>
+                    <td>₹3,300 per night</td>
+                </tr>
+                <tr>
+                    <td><strong>Amantra Royal</strong></td>
+                    <td>₹3,300 per night</td>
+                    <td>₹3,800 per night</td>
+                </tr>
+            </tbody>
+        </table>
 
-            <div class="delegate-item">
-                <strong>Anil Bhardwaj</strong>,
-                <span>PRL, Ahmedabad</span>
-            </div>
-            <div class="delegate-item">
-                <strong>Anil Narayan Raghav</strong>,
-                <span>University of Mumbai, Mumbai</span>
-            </div>
-            
-            <div class="delegate-item">
-                <strong>Ankush Bhaskar</strong>,
-                <span>SPL-VSSC, ISRO, Thiruvananthapuram</span>
-            </div>
-            <div class="delegate-item">
-                <strong>Arun Kumar Awasthi</strong>,
-                <span>University of Delhi, Delhi</span>
-            </div>
-            <div class="delegate-item">
-                <strong>Bhargav Vaidya</strong>,
-                <span>IIT, Indore</span>
-            </div>
-            <div class="delegate-item">
-                <strong>D. Pallamraju</strong>,
-                <span>PRL, Ahmedabad</span>
-            </div>
-            <div class="delegate-item">
-                <strong>Dibyendu Chakrabarty</strong>,
-                <span>PRL, Ahmedabad</span>
-            </div>
-            <div class="delegate-item">
-                <strong>Dipankar Banerjee</strong>,
-                <span>IIST, Thiruvananthapuram</span>
-            </div>
-            <div class="delegate-item">
-                <strong>Geeta Vichare</strong>,
-                <span>IIG, Mumbai</span>
-            </div>
+        <hr>
 
-            <div class="delegate-list">
-            <div class="delegate-item">
-                <strong>Jagdev Singh</strong>,
-                <span>IIA, Bengaluru</span>
-            </div>
-            <div class="delegate-item">
-                <strong>K. Sankarasubramanian</strong>,
-                <span>URSC, ISRO, Bengaluru</span>
-            </div>
-            <div class="delegate-item">
-                <strong>Krishna Prasad Sayamanthula</strong>,
-                <span>ARIES, Nainital</span>
-            </div>
-            <div class="delegate-item">
-                <strong>M. Shanmugam</strong>,
-                <span>PRL, Ahmedabad</span>
-            </div>
-            <div class="delegate-item">
-                <strong>Nirvikar Dashora</strong>,
-                <span>NARL, Tirupati</span>
-            </div>
-            <div class="delegate-item">
-                <strong>NPS Mithun</strong>,
-                <span>PRL, Ahmedabad</span>
-            </div>
-            <div class="delegate-item">
-                <strong>Piyali Chatterjee</strong>,
-                <span>IIA, Bengaluru</span>
-            </div>
-            <div class="delegate-item">
-                <strong>Ram Ajor Maurya</strong>,
-                <span>NIT, Calicut</span>
-            </div>
-            
+        <h3 class="key-objectives">How to Book</h3>
 
-            
-            <div class="delegate-item">
-                <strong>S.P. Rajaguru</strong>,
-                <span>IIA, Bengaluru</span>
-            </div>
-            <div class="delegate-item">
-                <strong>Sardar Singh Rao</strong>,
-                <span>Patna University, Patna</span>
-            </div>
-            <div class="delegate-item">
-                <strong>Santosh Vadawale</strong>,
-                <span>PRL, Ahmedabad</span>
-            </div>
-                <div class="delegate-item">
-                <strong>Shibu K. Mathew</strong>,
-                <span>USO-PRL, Udaipur</span>
-            </div>
-            <div class="delegate-item">
-                <strong>Vemareddy Panditi</strong>,
-                <span>IIA, Bengaluru</span>
-            </div>
-            <div class="delegate-item">
-                <strong>Vipin Kumar Yadav</strong>,
-                <span>SPL-VSSC, ISRO, Thiruvananthapuram</span>
-            </div>
+        <p>
+            Delegates wishing to stay at Amantra Comfort Hotel should make their reservation directly
+            with the hotel.
+        </p>
+
+        <div class="notice">
+            <strong>Reservation contact</strong><br>
+            Manager – Reservations<br>
+            Email:
+            <a href="mailto:reservation@amantrahotel.com">reservation@amantrahotel.com</a><br>
+            Website:
+            <a href="https://www.amantrahotel.com/" target="_blank" rel="noopener noreferrer">
+                https://www.amantrahotel.com/
+            </a>
         </div>
+
+        <p>
+            When making your reservation, please follow these instructions:
+        </p>
+
+        <ol style="padding-left: 24px; margin: 12px 0 20px;">
+            <li style="margin-bottom: 8px;">
+                Mention the meeting code <strong>USPM2026</strong> in your booking request to avail of
+                the negotiated rates.
+            </li>
+            <li style="margin-bottom: 8px;">
+                Please mark a copy (CC) to Shri Abhishek, Sr. AO, USO–PRL:
+                <a href="mailto:abhishekk@prl.res.in">abhishekk@prl.res.in</a>
+            </li>
+            <li style="margin-bottom: 8px;">
+                The hotel accommodation charges, including applicable GST, are to be paid directly by
+                the participant to the hotel, as per the hotel's payment terms.
+            </li>
+            <li style="margin-bottom: 8px;">
+                We recommend making your reservation at the earliest and preferably before
+                <strong>15 September 2026</strong>, as the negotiated rates are subject to room availability.
+            </li>
+        </ol>
+
+        <hr>
+
+        <h3 class="key-objectives">Local Transportation</h3>
+
+        <p>
+            For the convenience of delegates staying at Amantra Comfort Hotel, the Organising Committee
+            will arrange local transportation between the hotel and Udaipur Solar Observatory (USO), PRL,
+            during the meeting.
+        </p>
+
+        <hr>
+
+        <p>
+            We look forward to welcoming you to Udaipur and to your participation in
+            <strong>USPM 2026</strong>.
+        </p>
     </div>
+
 </main>
     </div>
+
   <footer class="site-footer">
     <div class="footer-inner">
 
